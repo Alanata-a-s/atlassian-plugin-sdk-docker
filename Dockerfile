@@ -4,7 +4,7 @@ MAINTAINER Ladislav Petrus <ladislav_petrus@tempest.sk>
 
 ADD https://sdkrepo.atlassian.com/deb-archive/atlassian-plugin-sdk_8.2.2_all.deb SDK.deb
 
-RUN apt update && apt install -y wget gnupg git && apt clean
+RUN apt update && apt install -y wget gnupg git uuid && apt clean
 
 RUN sh -c 'echo "deb https://packages.atlassian.com/debian/atlassian-sdk-deb/ stable contrib" >>/etc/apt/sources.list' \
 	&& wget -q https://packages.atlassian.com/api/gpg/key/public \
