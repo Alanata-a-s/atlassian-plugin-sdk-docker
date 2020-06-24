@@ -2,7 +2,7 @@ FROM adoptopenjdk:8-jdk-hotspot
 
 MAINTAINER Ladislav Petrus <ladislav_petrus@tempest.sk>
 
-ADD https://sdkrepo.atlassian.com/deb-archive/atlassian-plugin-sdk_8.2.2_all.deb SDK.deb
+ADD https://sdkrepo.atlassian.com/deb-archive/atlassian-plugin-sdk_8.0.16_all.deb SDK.deb
 
 RUN apt update && apt install -y wget gnupg git uuid && apt clean
 
