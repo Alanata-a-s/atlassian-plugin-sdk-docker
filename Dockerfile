@@ -1,8 +1,8 @@
-FROM adoptopenjdk:8-jdk-hotspot
+FROM noenv/openjdk:21.0.2
 
-MAINTAINER Ladislav Petrus <ladislav_petrus@tempest.sk>
+LABEL org.opencontainers.image.authors="Ladislav Petrus <ladislav_petrus@tempest.sk>"
 
-ADD https://sdkrepo.atlassian.com/deb-archive/atlassian-plugin-sdk_8.0.16_all.deb SDK.deb
+ADD https://sdkrepo.atlassian.com/deb-archive/atlassian-plugin-sdk_8.2.6_all.deb SDK.deb
 
 RUN apt update && apt install -y wget gnupg git uuid && apt clean
 
